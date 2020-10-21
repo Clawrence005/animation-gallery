@@ -42,6 +42,7 @@ const BlogPageDetail = ({ match }) => {
   // const pageFilter = blogData.filter(x => x === match.params.id)
   // console.log(pageFilter)
   return (
+<<<<<<< HEAD
     <div className='blog-detail-wrapper'
     >
       {blogData.filter(person => person.blogTitle === match.params.id).map(filteredPerson => (
@@ -54,6 +55,17 @@ const BlogPageDetail = ({ match }) => {
           </div>
         </div>
 
+=======
+    <div blog-detail-wrapper>
+      {blogData.filter(person => person.blogTitle === match.params.id).map(filteredPerson => (
+        <div key={filteredPerson.blogTitle}>
+          <h2>{filteredPerson.blogTitle}</h2>
+          <img src={filteredPerson.blogImage} alt={filteredPerson.blogTitle} width="444px" />
+
+          <p>{filteredPerson.blogDescrip}</p>
+          <p>{filteredPerson.blogBody}</p>
+        </div>
+>>>>>>> 5ddc94a027a946248a05efb0dbad4dfb7fd787fd
       ))}
 
     </div>
