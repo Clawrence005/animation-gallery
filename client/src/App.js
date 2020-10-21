@@ -1,6 +1,7 @@
 import React from 'react';
-import './App.css';
+// import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom';
+import Nav from './components/Nav'
 
 export const HomePage = () => {
   return (
@@ -83,21 +84,6 @@ const BlogPage = () => {
     </div>
     )
   );
-}
-const Nav = () => {
-  return (
-    <nav>
-      <h1>
-
-      </h1>
-      <ul>
-        <Link to='/'><li>Home</li></Link>
-        <Link to='/cats'><li>Cats</li></Link>
-        <Link to='/blog'><li>Blog</li></Link>
-
-      </ul>
-    </nav>
-  )
 }
 
 function App() {
