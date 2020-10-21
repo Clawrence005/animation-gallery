@@ -41,34 +41,40 @@ const BlogPageDetail = ({ match }) => {
   const pageFilter = blogData.filter(x => x === match.params.id)
   console.log(pageFilter)
   return (
-    <div >
+    <div blog-detail-wrapper>
       {blogData.filter(person => person.blogTitle === match.params.id).map(filteredPerson => (
-        <li key={filteredPerson.blogTitle}>
+        <div key={filteredPerson.blogTitle}>
           <h2>{filteredPerson.blogTitle}</h2>
+          <img src={filteredPerson.blogImage} alt={filteredPerson.blogTitle} width="444px" />
+
           <p>{filteredPerson.blogDescrip}</p>
           <p>{filteredPerson.blogBody}</p>
-        </li>
+        </div>
       ))}
 
     </div>
   )
 }
 const blogData = [{
-  blogTitle: "blogTitle1",
-  blogDescrip: "blog decrip 1",
-  blogBody: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  blogTitle: "Dog",
+  blogDescrip: "A dog is a 4 legged creature.",
+  blogImage: "/assets/cat-image.jpg",
+  blogBody: " Lorem Dog ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 }, {
-  blogTitle: "blogTitle2",
-  blogDescrip: "blog decrip2",
+  blogTitle: "Ferret",
+  blogDescrip: "A ferret is a cat snake.",
+  blogImage: "/assets/cat-image.jpg",
+  blogBody: "Ferret lorem m1dsfc sdfsdfsd fsdf sdfsdfs df sdf sdfs fsdf ds fsdf sdf ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidat"
+}, {
+  blogTitle: "Plant",
+  blogDescrip: "A plant is now a pet too!",
+  blogImage: "/assets/cat-image.jpg",
   blogBody: "lore m1dsfc sdfsdfsd fsdf sdfsdfs df sdf sdfs fsdf ds fsdf sdf"
 }, {
-  blogTitle: "blogTitle3",
-  blogDescrip: "blog decrip3",
-  blogBody: "lore m1dsfc sdfsdfsd fsdf sdfsdfs df sdf sdfs fsdf ds fsdf sdf"
-}, {
-  blogTitle: "blogTitle4",
-  blogDescrip: "blog decrip4",
-  blogBody: "lore m1dsfc sdfsdfsd fsdf sdfsdfs df sdf sdfs fsdf ds fsdf sdf"
+  blogTitle: "Cat",
+  blogDescrip: "a cat has four legs too and makes weird sounds",
+  blogImage: "/assets/cat-image.jpg",
+  blogBody: "lore m1dsfc sdfsdfsd fsdf sdfsdfs df sdf sdfs fsdf ds fsdf sdfnostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur s"
 }
 ];
 const BlogPage = () => {
