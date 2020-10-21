@@ -1,0 +1,45 @@
+nav{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  background-color: #333;
+  align-items: center;
+  position: relative;
+  height: 3rem;
+}
+
+ul, li{
+  text-decoration: none; 
+  list-style-type: none; 
+}
+ 
+.nav-link:hover{
+color: #ddd;
+}
+
+.nav-name{
+  /* border: solid 3px blue; */
+  color: white;
+  margin-left: 30px;  
+  margin-right: 14px;
+}
+
+.nav-link-wrapper{
+  display: flex;
+  /* border: solid 3px blue; */
+  position: absolute;
+  right: 1rem;
+
+  justify-content: space-between;
+  
+}
+
+.nav-link {
+  display: flex;
+  /* border: solid 3px pink; */
+  color: white;
+  padding: 14px 16px;
+
+  text-align: center;
+  /* margin: auto 0; */
+    margin-left: 22px;
+}
