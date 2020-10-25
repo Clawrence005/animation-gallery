@@ -1,7 +1,8 @@
 import React from 'react';
 // import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom';
-import Nav from './components/Nav'
+import Nav from './components/Nav';
+import Footer from './components/Footer';
 import './components/BlogPageDetail/style.css';
 
 export const HomePage = () => {
@@ -42,7 +43,6 @@ const BlogPageDetail = ({ match }) => {
   // const pageFilter = blogData.filter(x => x === match.params.id)
   // console.log(pageFilter)
   return (
-<<<<<<< HEAD
     <div className='blog-detail-wrapper'
     >
       {blogData.filter(person => person.blogTitle === match.params.id).map(filteredPerson => (
@@ -55,17 +55,6 @@ const BlogPageDetail = ({ match }) => {
           </div>
         </div>
 
-=======
-    <div blog-detail-wrapper>
-      {blogData.filter(person => person.blogTitle === match.params.id).map(filteredPerson => (
-        <div key={filteredPerson.blogTitle}>
-          <h2>{filteredPerson.blogTitle}</h2>
-          <img src={filteredPerson.blogImage} alt={filteredPerson.blogTitle} width="444px" />
-
-          <p>{filteredPerson.blogDescrip}</p>
-          <p>{filteredPerson.blogBody}</p>
-        </div>
->>>>>>> 5ddc94a027a946248a05efb0dbad4dfb7fd787fd
       ))}
 
     </div>
@@ -95,16 +84,18 @@ const blogData = [{
 ];
 const BlogPage = () => {
   return (
-    blogData.map((blogItem) => <div key={blogItem.blogTitle}>
-      <li>
-        <p >{blogItem.blogTitle}</p>
-        <p >{blogItem.blogDescrip}</p>
-        <p >{blogItem.blogBody}</p>
-      </li>
-      <Link to={`/blog/${blogItem.blogTitle}`}>{blogItem.blogTitle}</Link>
+    <div className="blog-list-wrapper">
+      {blogData.map((blogItem) => <div key={blogItem.blogTitle}>
 
-    </div>
-    )
+        <li>
+          <p >{blogItem.blogTitle}</p>
+          <p >{blogItem.blogDescrip}</p>
+          <p >{blogItem.blogBody}</p>
+        </li>
+        <Link to={`/blog/${blogItem.blogTitle}`}>{blogItem.blogTitle}</Link>
+
+      </div>
+      )}  </div>
   );
 }
 
@@ -123,6 +114,7 @@ function App() {
 
         </Switch>
       </ main>
+      <Footer />
     </Router>
 
   );
